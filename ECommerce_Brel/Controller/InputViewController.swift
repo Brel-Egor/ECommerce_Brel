@@ -72,26 +72,23 @@ class InputViewController: UIViewController {
     
     @objc func sendPostRequest(){
         
+        if self.contactDataTextField.text != "" && self.descriptionTextField.text != "" {
         let url = URL(string: "https://ecommerceserv.herokuapp.com/request")!
         var request = URLRequest(url: url)
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
-        let postString = "contactData=13&description=Jack"
+        let postString = "contactData=\(self.contactDataTextField.text!)&description=\(self.descriptionTextField.text!)"
         request.httpBody = postString.data(using: .utf8)
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil else {                                                 // check for fundamental networking
-                return
-            }
-            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
+
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
                 print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                
             }
-            
         }
         task.resume()
         self.navigationController?.popViewController(animated: true)
-    }
+        }
     
+    }
 }
-
 
