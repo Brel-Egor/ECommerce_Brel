@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InputViewController: UIViewController {
+class InputViewController: UIViewController,UITextFieldDelegate {
 
     let contactDataTextField = UITextField()
     
@@ -19,6 +19,8 @@ class InputViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
+        self.contactDataTextField.delegate = self
+        self.descriptionTextField.delegate = self
         sendButton.addTarget(self, action: #selector(sendPostRequest), for: UIControlEvents.touchUpInside)
         // Do any additional setup after loading the view.
     }
@@ -89,6 +91,10 @@ class InputViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
         }
     
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
 
