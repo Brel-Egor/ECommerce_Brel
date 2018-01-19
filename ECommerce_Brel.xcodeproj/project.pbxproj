@@ -12,6 +12,7 @@
 		3FEAF4702011EAAF00EBF65E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FEAF46E2011EAAF00EBF65E /* Main.storyboard */; };
 		3FEAF4722011EAAF00EBF65E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FEAF4712011EAAF00EBF65E /* Assets.xcassets */; };
 		3FEAF4752011EAAF00EBF65E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FEAF4732011EAAF00EBF65E /* LaunchScreen.storyboard */; };
+		3FEAF47E2011EAFC00EBF65E /* JsonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEAF47D2011EAFC00EBF65E /* JsonConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		3FEAF4712011EAAF00EBF65E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FEAF4742011EAAF00EBF65E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FEAF4762011EAAF00EBF65E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FEAF47D2011EAFC00EBF65E /* JsonConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		3FEAF4692011EAAF00EBF65E /* ECommerce_Brel */ = {
 			isa = PBXGroup;
 			children = (
+				3FEAF47C2011EADC00EBF65E /* Model */,
 				3FEAF46A2011EAAF00EBF65E /* AppDelegate.swift */,
 				3FEAF46C2011EAAF00EBF65E /* ViewController.swift */,
 				3FEAF46E2011EAAF00EBF65E /* Main.storyboard */,
@@ -62,6 +65,14 @@
 				3FEAF4762011EAAF00EBF65E /* Info.plist */,
 			);
 			path = ECommerce_Brel;
+			sourceTree = "<group>";
+		};
+		3FEAF47C2011EADC00EBF65E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3FEAF47D2011EAFC00EBF65E /* JsonConstants.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FEAF47E2011EAFC00EBF65E /* JsonConstants.swift in Sources */,
 				3FEAF46D2011EAAF00EBF65E /* ViewController.swift in Sources */,
 				3FEAF46B2011EAAF00EBF65E /* AppDelegate.swift in Sources */,
 			);
