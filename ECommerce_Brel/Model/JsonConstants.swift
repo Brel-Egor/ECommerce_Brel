@@ -22,12 +22,12 @@ struct Constants{
 }
 
 struct Items: Codable{
-    let arrayOfItems : Array<Item>
+    let items : Array<Item>
 }
 
 struct Item: Codable {
     let id: Int
-    let itemName: String
+    let name: String
     let price: Double
     let pictUrl: String
 }
