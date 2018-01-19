@@ -27,6 +27,7 @@ struct Items: Codable{
 
 struct Item: Codable {
     let id: Int
+    let description: String
     let name: String
     let price: Double
     let pictUrl: String
